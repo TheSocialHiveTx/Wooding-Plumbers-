@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooding Plumbers | Expert Roofing in Deer Park, TX</title>
+    <meta name="description" content="Wooding Plumbers provides expert roof repair & replacement in Deer Park, TX. Storm damage experts, licensed & insured. Call (832) 307-3263 for a free inspection today!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scroll-reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal-visible { opacity: 1; transform: translateY(0); }
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+
+    <!-- View Toggle UI (Dev Tools) -->
+    <div class="fixed bottom-4 right-4 z-[9999] flex gap-2">
+        <button id="btn-view-website" onclick="setView('website')" class="px-4 py-2 rounded-full text-xs font-bold shadow-lg transition-all bg-blue-600 text-white ring-2 ring-white">
+            View Live Site
+        </button>
+        <button id="btn-view-strategy" onclick="setView('strategy')" class="px-4 py-2 rounded-full text-xs font-bold shadow-lg transition-all bg-white text-slate-800 hover:bg-slate-100">
+            View Project Strategy
+        </button>
+    </div>
+
+    <!-- WEBSITE VIEW -->
+    <div id="website-view" class="flex flex-col min-h-screen">
+        <!-- Urgent Top Bar -->
+        <div class="bg-red-600 text-white py-2 px-4 text-center text-sm font-semibold">
+            <span class="flex items-center justify-center gap-2">
+                <i data-lucide="alert-triangle" class="w-4 h-4"></i> 24/7 Emergency Storm Damage Response - Call Now
+            </span>
+        </div>
+
+        <!-- Sticky Navigation -->
+        <nav class="sticky top-0 z-50 bg-white shadow-md border-b border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold text-blue-900 tracking-tight leading-none uppercase">Wooding</span>
+                    <span class="text-sm font-bold text-red-600 tracking-widest uppercase">Plumbers & Roofing</span>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm uppercase tracking-wider">
+                    <a href="#services" class="hover:text-blue-900 transition-colors">Services</a>
+                    <a href="#why-us" class="hover:text-blue-900 transition-colors">Why Us</a>
+                    <a href="#process" class="hover:text-blue-900 transition-colors">Process</a>
+                    <a href="#faq" class="hover:text-blue-900 transition-colors">FAQ</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="tel:(832) 307-3263" class="hidden sm:flex items-center gap-2 bg-blue-900 text-white px-5 py-2.5 rounded-full font-bold hover:bg-blue-800 transition-all shadow-md transform hover:scale-105 active:scale-95">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        (832) 307-3263
+                    </a>
+                    <button class="md:hidden p-2 text-slate-800" onclick="toggleMobileMenu()">
+                        <i id="mobile-menu-icon" data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-white md:hidden pt-24 px-6">
+            <div class="flex flex-col gap-6 text-xl font-bold text-slate-800">
+                <a href="#services" onclick="toggleMobileMenu()">Services</a>
+                <a href="#why-us" onclick="toggleMobileMenu()">Why Us</a>
+                <a href="#process" onclick="toggleMobileMenu()">Process</a>
+                <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+                <a href="tel:(832) 307-3263" class="flex items-center gap-3 bg-red-600 text-white p-4 rounded-xl justify-center shadow-xl">
+                    <i data-lucide="phone"></i> Call (832) 307-3263
+                </a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="relative bg-slate-900 pt-20 pb-24 md:pt-32 md:pb-40 text-white overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <img src="https://picsum.photos/seed/roofing1/1600/900" alt="Roofing" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+            </div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-reveal">
+                    <div class="inline-flex items-center gap-2 bg-red-600/20 text-red-500 border border-red-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                        <i data-lucide="clock" class="w-3 h-3"></i> Emergency Service Available
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                        Deer Park's Trusted <span class="text-blue-400">Roofing Experts</span> Fast, Reliable, Local.
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-lg leading-relaxed">
+                        Don't let a small leak turn into a costly disaster. Wooding Plumbers provides expert roof repair and replacement with a focus on integrity and quality.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="tel:(832) 307-3263" class="bg-red-600 hover:bg-red-700 text-white text-lg font-extrabold px-8 py-4 rounded-xl shadow-2xl flex items-center justify-center gap-3 transition-all transform hover:-translate-y-1">
+                            <i data-lucide="phone"></i> CALL NOW: (832) 307-3263
+                        </a>
+                        <a href="#contact" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 text-lg font-bold px-8 py-4 rounded-xl flex items-center justify-center transition-all">
+                            Free Inspection
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4 text-sm font-medium text-slate-400">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-800" src="https://picsum.photos/seed/11/100/100" alt="Customer">
+                            <img class="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-800" src="https://picsum.photos/seed/12/100/100" alt="Customer">
+                            <img class="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-800" src="https://picsum.photos/seed/13/100/100" alt="Customer">
+                            <img class="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-800" src="https://picsum.photos/seed/14/100/100" alt="Customer">
+                        </div>
+                        <span>Trusted by 500+ Deer Park Homeowners</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block scroll-reveal">
+                    <div class="bg-white p-8 rounded-2xl shadow-2xl text-slate-900">
+                        <h3 class="text-2xl font-bold mb-4">Request Your <span class="text-blue-600 underline">Free Inspection</span></h3>
+                        <p class="text-slate-500 mb-6">Complete the form below and we'll call you within 15 minutes during business hours.</p>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Your Name" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                            <input type="tel" placeholder="Phone Number" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                            <select class="w-full p-4 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all text-slate-500">
+                                <option>Type of Service Needed</option>
+                                <option>Roof Repair</option>
+                                <option>Roof Replacement</option>
+                                <option>Storm Damage Recovery</option>
+                                <option>Free Roof Inspections</option>
+                                <option>Emergency Leak Repair</option>
+                                <option>Residential Roofing</option>
+                            </select>
+                            <button type="button" class="w-full bg-blue-900 text-white font-bold py-4 rounded-lg hover:bg-blue-800 transition-all shadow-lg">
+                                Get Free Estimate
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <div class="bg-white border-y border-slate-100 py-8">
+            <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-70 grayscale">
+                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="shield" class="text-blue-600"></i> Licensed & Insured</div>
+                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="map-pin" class="text-blue-600"></i> Locally Owned</div>
+                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="check-circle" class="text-blue-600"></i> Guaranteed Quality</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-yellow-500"><i data-lucide="star" class="fill-current"></i> 5-Star Service</div>
+            </div>
+        </div>
+
+        <!-- Services Grid -->
+        <section id="services" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-16 scroll-reveal">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">Quality Roofing Services</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto">From minor repairs to complete storm restorations, we are the go-to roofing specialists for Deer Park residents.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service Cards -->
+                    <div class="scroll-reveal group p-8 border border-slate-100 rounded-2xl bg-white hover:border-blue-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                            <i data-lucide="check-circle" class="text-blue-600 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Roof Repair</h3>
+                        <p class="text-slate-500 mb-6">Expert solutions tailored for Texas weather conditions. Built to last and withstand the elements.</p>
+                        <a href="tel:(832) 307-3263" class="flex items-center gap-1 text-blue-600 font-bold group-hover:gap-2 transition-all">
+                            Request Quote <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    <div class="scroll-reveal group p-8 border border-slate-100 rounded-2xl bg-white hover:border-blue-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                            <i data-lucide="check-circle" class="text-blue-600 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Roof Replacement</h3>
+                        <p class="text-slate-500 mb-6">Top-tier materials and professional installation for a roof that secures your home for decades.</p>
+                        <a href="tel:(832) 307-3263" class="flex items-center gap-1 text-blue-600 font-bold group-hover:gap-2 transition-all">
+                            Request Quote <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    <div class="scroll-reveal group p-8 border border-slate-100 rounded-2xl bg-white hover:border-blue-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                            <i data-lucide="check-circle" class="text-blue-600 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Storm Damage Recovery</h3>
+                        <p class="text-slate-500 mb-6">Quick mitigation and expert insurance claim assistance for hail and wind damage.</p>
+                        <a href="tel:(832) 307-3263" class="flex items-center gap-1 text-blue-600 font-bold group-hover:gap-2 transition-all">
+                            Request Quote <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-us" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+                <div class="scroll-reveal">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">Why Deer Park Neighbors Choose Wooding Plumbers</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="shield" class="text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Full Insurance Claim Assistance</h4>
+                                <p class="text-slate-500">We work directly with your insurance company to ensure you get the maximum coverage for storm damage repairs.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="map-pin" class="text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Local Knowledge & Expertise</h4>
+                                <p class="text-slate-500">Being based in Deer Park means we understand the specific roofing needs and codes of our community.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="clock" class="text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Rapid Emergency Response</h4>
+                                <p class="text-slate-500">When the storm hits, we are ready. We provide quick tarping and mitigation to prevent further interior damage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 p-6 bg-blue-900 rounded-2xl text-white shadow-xl">
+                        <p class="italic text-lg mb-4">"The team at Wooding was incredible. They fixed our leak the same day and helped us navigate our insurance claim with zero stress."</p>
+                        <div class="font-bold">- Sarah J., Deer Park Resident</div>
+                    </div>
+                </div>
+                <div class="relative scroll-reveal">
+                    <img src="https://picsum.photos/seed/roof-worker/600/800" alt="Roofing Work" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
+                        <div class="text-4xl font-extrabold text-blue-900">20+</div>
+                        <div class="text-slate-500 font-bold uppercase text-xs tracking-widest">Years of Experience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-16 scroll-reveal">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">Our Simple 4-Step Process</h2>
+                    <p class="text-slate-500">Getting your roof fixed shouldn't be a headache.</p>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="relative text-center scroll-reveal">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">1</div>
+                        <h3 class="text-xl font-bold mb-2">Free Inspection</h3>
+                        <p class="text-slate-500">We conduct a thorough 21-point inspection of your roof and attic.</p>
+                    </div>
+                    <div class="relative text-center scroll-reveal">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">2</div>
+                        <h3 class="text-xl font-bold mb-2">Detailed Proposal</h3>
+                        <p class="text-slate-500">You'll receive a clear, transparent estimate with no hidden costs.</p>
+                    </div>
+                    <div class="relative text-center scroll-reveal">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">3</div>
+                        <h3 class="text-xl font-bold mb-2">Expert Install</h3>
+                        <p class="text-slate-500">Our certified crew completes the work with minimal disruption.</p>
+                    </div>
+                    <div class="relative text-center scroll-reveal">
+                        <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">4</div>
+                        <h3 class="text-xl font-bold mb-2">Final Walkthrough</h3>
+                        <p class="text-slate-500">We ensure 100% satisfaction and a spotless job site cleanup.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-slate-50">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-center text-slate-900 mb-12 scroll-reveal">Frequently Asked Questions</h2>
+                <div class="space-y-4 scroll-reveal">
+                    <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                        <summary class="flex items-center justify-between p-6 font-bold cursor-pointer list-none text-slate-800 hover:text-blue-900 transition-colors">
+                            Do you help with insurance claims?
+                            <i data-lucide="chevron-right" class="group-open:rotate-90 transition-transform"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-500 leading-relaxed">
+                            Yes! We have extensive experience working with adjusters and can help document storm damage to ensure your claim is processed fairly.
+                        </div>
+                    </details>
+                    <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                        <summary class="flex items-center justify-between p-6 font-bold cursor-pointer list-none text-slate-800 hover:text-blue-900 transition-colors">
+                            How much does a new roof cost?
+                            <i data-lucide="chevron-right" class="group-open:rotate-90 transition-transform"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-500 leading-relaxed">
+                            Costs vary based on size and materials. We provide 100% free, no-obligation inspections and detailed quotes tailored to your specific needs.
+                        </div>
+                    </details>
+                    <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                        <summary class="flex items-center justify-between p-6 font-bold cursor-pointer list-none text-slate-800 hover:text-blue-900 transition-colors">
+                            How long does a roof replacement take?
+                            <i data-lucide="chevron-right" class="group-open:rotate-90 transition-transform"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-500 leading-relaxed">
+                            Most residential roof replacements in Deer Park are completed in 1-2 days, depending on the complexity and weather conditions.
+                        </div>
+                    </details>
+                    <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                        <summary class="flex items-center justify-between p-6 font-bold cursor-pointer list-none text-slate-800 hover:text-blue-900 transition-colors">
+                            Are you licensed and insured?
+                            <i data-lucide="chevron-right" class="group-open:rotate-90 transition-transform"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-500 leading-relaxed">
+                            Absolutely. Wooding Plumbers is fully licensed and carries comprehensive liability and workers' compensation insurance for your protection.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-blue-900 text-white">
+            <div class="max-w-5xl mx-auto px-4 text-center scroll-reveal">
+                <h2 class="text-3xl md:text-6xl font-extrabold mb-8 leading-tight">Need Roofing Help Fast?</h2>
+                <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">Our local Deer Park team is standing by to assist with leaks, storm damage, or routine inspections.</p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="tel:(832) 307-3263" class="bg-red-600 hover:bg-red-700 text-white text-2xl font-black px-12 py-6 rounded-2xl shadow-2xl flex items-center justify-center gap-4 transition-all transform hover:scale-105">
+                        <i data-lucide="phone"></i> (832) 307-3263
+                    </a>
+                    <a href="#contact" class="bg-white text-blue-900 text-xl font-bold px-12 py-6 rounded-2xl hover:bg-slate-100 transition-all flex items-center justify-center">
+                        Book Free Inspection
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Map -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16">
+                <div class="scroll-reveal">
+                    <h2 class="text-3xl font-extrabold mb-8">Get In Touch</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-600"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <h4 class="font-bold">Our Office</h4>
+                                <p class="text-slate-500">3717 Center St, Deer Park, TX 77536</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-600"><i data-lucide="phone"></i></div>
+                            <div>
+                                <h4 class="font-bold">Phone</h4>
+                                <p class="text-slate-500">(832) 307-3263</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-600"><i data-lucide="clock"></i></div>
+                            <div>
+                                <h4 class="font-bold">Hours</h4>
+                                <p class="text-slate-500">Emergency Service: 24/7<br>Office: Mon-Fri 8am - 6pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-2xl h-80 bg-slate-100 relative scroll-reveal">
+                    <div class="absolute inset-0 flex items-center justify-center text-slate-400 font-bold p-10 text-center">
+                        <div class="space-y-2">
+                            <i data-lucide="map-pin" class="mx-auto w-12 h-12"></i>
+                            <p>Map View for Deer Park, TX</p>
+                            <p class="text-xs uppercase tracking-widest font-black">3717 Center St, 77536</p>
+                        </div>
+                    </div>
+                    <img src="https://picsum.photos/seed/map/800/600" alt="Map Location" class="w-full h-full object-cover opacity-50">
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <div class="flex flex-col mb-4">
+                        <span class="text-white text-xl font-extrabold uppercase">Wooding Plumbers</span>
+                        <span class="text-xs font-bold text-red-600 tracking-widest uppercase">Expert Roofing Service</span>
+                    </div>
+                    <p class="text-sm">© <span id="current-year"></span> Wooding Plumbers. All rights reserved.</p>
+                </div>
+                <div class="flex gap-8 text-sm font-bold">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Sticky Mobile CTA Bar -->
+        <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-100 p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+            <a href="tel:(832) 307-3263" class="w-full bg-red-600 text-white font-black py-4 rounded-xl flex items-center justify-center gap-3 text-lg animate-pulse">
+                <i data-lucide="phone"></i> CALL NOW: (832) 307-3263
+            </a>
+        </div>
+    </div>
+
+    <!-- STRATEGY VIEW -->
+    <div id="strategy-view" class="hidden bg-slate-50 min-h-screen py-12 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <!-- Header -->
+            <div class="bg-blue-900 text-white p-8 rounded-3xl shadow-xl">
+                <h1 class="text-3xl font-extrabold mb-2">WaaS Project Strategy</h1>
+                <p class="opacity-80">WOODING PLUMBERS | DEER PARK, TX</p>
+            </div>
+
+            <!-- A) Project Summary -->
+            <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <div class="flex items-center gap-3 mb-6 text-blue-900">
+                    <i data-lucide="target" class="w-6 h-6"></i>
+                    <h2 class="text-2xl font-bold">A) Project Summary</h2>
+                </div>
+                <p class="text-slate-600 leading-relaxed">
+                    High-converting 1-page lead generation engine for <strong>Wooding Plumbers</strong>. Designed specifically for the roofing industry in Deer Park, TX. 
+                </p>
+            </section>
+
+            <!-- B) Site Structure -->
+            <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <div class="flex items-center gap-3 mb-6 text-blue-900">
+                    <i data-lucide="layout" class="w-6 h-6"></i>
+                    <h2 class="text-2xl font-bold">B) Site Structure & Section Order</h2>
+                </div>
+                <ol class="list-decimal list-inside space-y-3 text-slate-600 font-medium">
+                    <li><strong>Urgent Hero:</strong> Immediate call to action.</li>
+                    <li><strong>Trust Bar:</strong> Proof of licensing & insurance.</li>
+                    <li><strong>Services Grid:</strong> Core offerings display.</li>
+                    <li><strong>Authority Section:</strong> Deep dive into "Why Us".</li>
+                    <li><strong>Social Proof:</strong> Featured review.</li>
+                    <li><strong>The Process:</strong> 4-step workflow.</li>
+                    <li><strong>FAQ:</strong> Friction removal.</li>
+                </ol>
+            </section>
+
+            <!-- C) SEO Pack -->
+            <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <div class="flex items-center gap-3 mb-6 text-blue-900">
+                    <i data-lucide="search" class="w-6 h-6"></i>
+                    <h2 class="text-2xl font-bold">C) SEO Pack</h2>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <span class="text-xs uppercase font-bold text-slate-400">Page Title</span>
+                        <p class="font-bold text-slate-800">Best Roofing Contractors Deer Park TX | Wooding Plumbers</p>
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase font-bold text-slate-400">Target Keywords</span>
+                        <p class="text-slate-600">Roofer Deer Park TX, roof repair Deer Park, storm damage roofing Texas.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // View Toggling Logic
+        function setView(view) {
+            const website = document.getElementById('website-view');
+            const strategy = document.getElementById('strategy-view');
+            const btnWeb = document.getElementById('btn-view-website');
+            const btnStrat = document.getElementById('btn-view-strategy');
+
+            if (view === 'website') {
+                website.classList.remove('hidden');
+                strategy.classList.add('hidden');
+                btnWeb.classList.add('bg-blue-600', 'text-white', 'ring-2', 'ring-white');
+                btnWeb.classList.remove('bg-white', 'text-slate-800');
+                btnStrat.classList.remove('bg-blue-600', 'text-white', 'ring-2', 'ring-white');
+                btnStrat.classList.add('bg-white', 'text-slate-800');
+            } else {
+                website.classList.add('hidden');
+                strategy.classList.remove('hidden');
+                btnStrat.classList.add('bg-blue-600', 'text-white', 'ring-2', 'ring-white');
+                btnStrat.classList.remove('bg-white', 'text-slate-800');
+                btnWeb.classList.remove('bg-blue-600', 'text-white', 'ring-2', 'ring-white');
+                btnWeb.classList.add('bg-white', 'text-slate-800');
+            }
+            window.scrollTo(0, 0);
+        }
+
+        // Mobile Menu Toggle Logic
+        let mobileMenuOpen = false;
+        function toggleMobileMenu() {
+            mobileMenuOpen = !mobileMenuOpen;
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            
+            if (mobileMenuOpen) {
+                menu.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+
+        // Scroll Reveal Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Set Current Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

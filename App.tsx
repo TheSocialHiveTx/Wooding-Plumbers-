@@ -1,0 +1,2 @@
+
+// Static build - React removed.
